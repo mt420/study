@@ -1,0 +1,36 @@
+p {
+    color: red;
+    font-size: 50px
+}
+#red{
+    color: green;
+}
+/*class不唯一，可重复使用*/
+.blue{
+    color: blue;
+}
+.size20{
+    font-size: 20px;
+}
+/*交集选择器
+必须以元素开头*/
+div.blue{
+    font-size: 50px;
+}
+.a.b.c{
+    color: green;
+}
+/*选择器分组
+通知选中多个选择器对应的元素*/
+h1,span,div.red,#id{
+    color: yellow;
+}
+span{
+    color: red;
+    font-size: 50px;
+}
+/*父子选择器*/
+
+/*兄弟选择器
+
+*/

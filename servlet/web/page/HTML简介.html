@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    第二种方式，内部样式表-->
+    <style>
+        /*里面遵循CSS标准，不是HTML标准*/
+        p{color: red; font-size: 30px}
+        /*#为id，但id唯一，只能有1个在同一个网页中*/
+        #red{
+            color: green;
+        }
+        /*class不唯一，可重复使用*/
+        .blue{
+            color: blue;
+        }
+        .size20{
+            font-size: 20px;
+           }
+
+
+    </style>
+<!--    第三种方式，外部样式表-->
+    <link rel="stylesheet" href="../css/1.css">
+
+</head>
+<body>
+    <!--
+        网页分成三部分：
+            结构（HTML）
+            表现（CSS）
+            行为（JavaScript）
+        CSS
+            -层叠样式表
+    -->
+<!--
+    使用CSS来改变元素的样式：
+    第一种方式（内联样式，行内样式）：
+        -在标签内部通过style属性来设置元素的样式
+
+    -->
+    <P style="color:red; font-size: 20px"> 少小离家老大回，乡音无改鬓毛衰</P>
+    <P> 少小离家老大回，乡音无改鬓毛衰</P>
+    <P id="red"> 少小离家老大回，乡音无改鬓毛衰</P>
+    <P> 少小离家老大回，乡音无改鬓毛衰</P>
+    <P class="blue 20"> 少小离家老大回，乡音无改鬓毛衰</P>
+    <P class="blue"> 少小离家老大回，乡音无改鬓毛衰</P>
+
+</body>
+</html>

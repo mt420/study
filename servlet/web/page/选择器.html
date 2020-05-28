@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--    <link href="../css/1.css">-->
+    <title>Title</title>
+    <style>
+        p {
+        color: orange;
+        font-size: 50px
+        }
+        #red{
+        color: green;
+        }
+        /*class不唯一，可重复使用*/
+        .blue{
+        color: blue;
+        }
+        .size20{
+        font-size: 20px;
+        }
+        /*交集选择器
+        必须以元素开头*/
+        div.blue{
+        font-size: 50px;
+        }
+        .a.b.c{
+        color: green;
+        }
+        /*选择器分组
+        通知选中多个选择器对应的元素*/
+        h1,span,div,.red,#id {
+            color: purple;
+        }
+
+        /*父子选择器*/
+        div>span>p{
+            color: red;
+        }
+        /*兄弟选择器
+
+        */
+        p+span{
+            color: skyblue;
+        }
+        div~p{
+            color: yellow;
+            font-size: 40px;
+        }
+    /*    属性选择器
+    【属性名】
+    【属性名=属性值】
+    【属性名^=属性值】开头
+    【属性名$=属性值】结尾
+    【属性名*=属性值】结尾
+    */
+        /*div[title]{*/
+        /*    color: red;*/
+        /*}*/
+        /*div[title=abc]{*/
+        /*    color: black;*/
+        /*}*/
+        /*div[title$=abc]{*/
+        /*    color: orange;*/
+        /*}        */
+        div[title*=a]{
+            color: orange;
+        }
+        /*ul>li:first-child{*/
+        /*    color: skyblue;*/
+        /*}        */
+        /*ul>li:only-child{*/
+        /*    color: skyblue;*/
+        /*}*/
+        /*ul>li:nth-child(2n){*/
+        /*    color: darkgoldenrod;*/
+        /*}*/
+        /*ul>li:first-of-type{*/
+        /*    color: red;*/
+        /*}*/
+        ul>li:not(:nth-of-type(3)){
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div title="abc">I am a div</div>
+    <div title="abcde">I am a div</div>
+    <div title="defa">I am a div</div>
+    <div>I am a div</div>
+    <div>I am a div</div>
+    <div>I am a div</div>
+
+    <div>I am a selector
+        <p>I am a p</p>
+        <span>I am a span
+            <p>I am the p in the span</p>
+        </span>
+        <div>divdivdiv</div>
+        <p>spanspanspan</p>
+    </div>
+    <ul>
+        <li></li>
+    </ul>
+    <ul>
+        <span>spanspan</span>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+        <li>five</li>
+    </ul>
+
+</body>
+</html>
