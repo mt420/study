@@ -36,13 +36,11 @@ public class JdbcUtils {
     public static Connection getConnection(){
 
         Connection conn = null;
-
         try {
             conn = dataSource.getConnection();
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         return conn;
     }
 
@@ -59,5 +57,4 @@ public class JdbcUtils {
             }
         }
     }
-
 }

@@ -12,7 +12,6 @@ public class UserServiceImpl implements UserService {
     @Override
     public void registerUser(User user) {
         userDao.saveUser(user);
-
     }
 
     @Override
@@ -23,7 +22,6 @@ public class UserServiceImpl implements UserService {
     @Override
     public boolean existUsername(String username) {
         if(userDao.queryUserByUsername(username)==null) {
-
             return false;
         }
         else {return true;}
